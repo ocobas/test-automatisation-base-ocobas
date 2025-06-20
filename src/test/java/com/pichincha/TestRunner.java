@@ -2,7 +2,6 @@ package com.pichincha;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
-import com.pichincha.utils.ControlsExecutionParallelAgents;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import net.minidev.json.JSONArray;
@@ -30,8 +29,6 @@ public class TestRunner {
 
     @Test
     public void testRunner() throws IOException {
-        ControlsExecutionParallelAgents.featuresSegmentation();
-
         Results results = Runner.path("src/test/java/com/pichincha")
                 .tags("@MarvelFeature").outputCucumberJson(true).parallel(5);
 
