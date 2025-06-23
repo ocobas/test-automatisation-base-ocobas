@@ -25,7 +25,7 @@ Feature:
       * def characterId = response.id
 
       Given url baseUrl + '/characters/' + characterId
-      And request {"name": 'SF Hero 5', "alterego": "Salesforce Developer", "description": "Genius billionaire", "powers": ["Armor", "Flight"]}
+      And request {"name": 'SF Hero 6', "alterego": "Salesforce Developer", "description": "Genius billionaire", "powers": ["Armor", "Flight"]}
       When method put
       Then status 200
       And print response
